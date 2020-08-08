@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../static/css/publish.css">
+</head>
+<body>
+    <h1>publications des offres</h1><br>
+    
+      
+    <ol>
+        <div id="block">
+            
+            
+            <h3><li>Profil</li></h3>
+            <h3><li>Poste</li></h3>
+            <h3><li>Compétences</li></h3>
+            <h3><li>Qualités</li></h3>
+            <h3><li>Contrat</li></h3>
+            <h3><li>Lieu</li></h3>
+            <h3><li>Durée</li></h3>
+            <h3><li>Démarrage</li></h3>
+            <h3><li>Expérience</li></h3><br>
+            <li><a class="btn btn-sm btn info" href="" style="color: transparent;">Update</a></li>
+            <li><a class="btn btn-sm btn info" href="" style="color: transparent;">Delete</a></li>
+            
+        </div>
+
+        {% for n in offre %}
+
+        <hr>
+        <div id="block">
+        
+        
+        <h3><li>{{n.Profil}}</li></h3>
+        <h3><li>{{n.Poste}}</li></h3>
+        <h3><li>{{n.Compétences}}</li></h3>
+        <h3><li>{{n.Qualités}}</li></h3>
+        <h3><li>{{n.Contrat}}</li></h3>
+        <h3><li>{{n.Lieu}}</li></h3>
+        <h3><li>{{n.Durée}}</li></h3>
+        <h3><li>{{n.Démarrage}}</li></h3>
+        <h3><li>{{n.Expérience}}</li></h3><br>
+        <li><a class="btn btn-sm btn info" href="{% url 'update' pk=n.id %}" >Update</a></li>
+        <li><a class="btn btn-sm btn info" href="{% url 'delete' pk=n.id %}">Delete</a></li>
+        
+
+    </div>
+        {% endfor %}
+
+        <a class="btn btn-sm btn info" href="logout">logout</a>
+    </ol>  
+    
+    {% endblock %}
+    
+
+</body>
+</html>

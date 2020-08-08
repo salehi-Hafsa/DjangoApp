@@ -1,0 +1,106 @@
+
+*{
+
+padding: 0;
+margin: 0;
+
+text-decoration: none;
+
+list-style-type: none;
+
+}
+
+body{
+
+background-image: url("{% static '../../statics/images/bg-offre.jpg' % }");
+
+
+
+}
+
+h1{
+
+    margin-top: 3rem;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: crimson;
+
+}
+
+hr{
+
+border: solid darkslategray .3rem;
+
+background-color: darkslategray;
+
+color:darkslategray;
+
+width: 80vw;
+
+}
+
+ol{
+
+   display: flex;
+
+   justify-content: center;
+
+   flex-direction: column;
+
+   align-items: center;
+    
+    }
+
+h2{
+   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    color: darkcyan;
+
+    font-size: 1.8rem;
+
+}
+
+
+
+#block{
+
+    display: flex;
+
+   justify-content: space-between;
+
+   align-items: center;
+
+   width: 80vw;
+
+   margin: 2rem 0 2rem 0;
+
+}
+
+h3{
+
+    text-align: center;
+
+    font-weight: bold;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: darkslategray; 
+
+    width: 6rem;
+}
+
+a{
+
+    text-align: center;
+
+    font-weight: bold;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}

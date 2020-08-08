@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="main">
+        <div>
+            {% for message in messages %}
+            <h3> {{message}} </h3>
+            {% endfor %}
+        </div>
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">saisir une offre</h2>
+                        <form method="POST" class="register-form" id="register-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="Poste"></label>
+                                <input type="text" name="Poste" id="Poste" placeholder="Poste"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="Profil"></label>
+                                <input type="text" name="Profil" id="Profil" placeholder="Profil"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="Compétences téchniques"></label>
+                                <input type="text" name="Compétences téchniques" id="Compétences téchniques" placeholder="Compétences téchniques"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="Qualités personelles requises"></label>
+                                <input type="text" name="Qualités personelles requises" id="Qualités personelles requises" placeholder="Qualités personelles requises"/>
+							</div>
+							<div class="form-group">
+                                <label for="Type de contrat"></label>
+                                <input type="text" name="Type de contrat" id="Type de contrat" placeholder="Type de contrat"/>
+							</div>
+							<div class="form-group">
+                                <label for="Lieu"></label>
+                                <input type="text" name="Lieu" id="Lieu" placeholder="Lieu"/>
+							</div>
+							<div class="form-group">
+                                <label for="Durée"></label>
+                                <input type="text" name="Durée" id="Durée" placeholder="Durée"/>
+							</div>
+							<div class="form-group">
+                                <label for="Date de démarrage"></label>
+                                <input type="text" name="Date de démarrage" id="Date de démarrage" placeholder="Date de démarrage"/>
+							</div>
+							<div class="form-group">
+                                <label for="Expérience minimale"></label>
+                                <input type="text" name="Expérience minimale" id="Expérience minimale" placeholder="Expérience minimale"/>
+							</div>
+                            
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Valider"/>
+                            </div>
+                            <div class="text-center p-t-46 p-b-20">
+                                <a href="publish">voir les offres</a>
+                            </div>
+                            <a class="btn btn-sm btn info" href="logout">logout</a>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="{% static 'images/offres.jpg' %}" alt="offre image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
